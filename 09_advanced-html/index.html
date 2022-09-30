@@ -604,15 +604,15 @@
             </label>
             <label class="form-label flex">
               <span class="label-text">Дата прибытия</span>
-              <input class="form-input-date" type="date">
+              <input class="form-input-date" type="date" name="date">
             </label>
             <label class="form-label flex">
               <span class="label-text">Ночей</span>
-              <input class="form-input-number" type="number">
+              <input class="form-input-number" type="number" name="nights">
             </label>
             <label class="form-label flex">
               <span class="label-text">Туристы</span>
-              <input class="form-input-number" type="number" required>
+              <input class="form-input-number" type="number" name="tourists" required>
             </label>
             <button class="form-btn btn">
               Найти
@@ -734,9 +734,15 @@
         </div>
         <div class="footer-right">
           <ul class="footer-list-social list-reset">
-            <li class="footer-item-social footer-item-trip"></li>
-            <li class="footer-item-social footer-item-ok"></li>
-            <li class="footer-item-social  footer-item-vk"></li>
+            <li class="footer-item-social">
+              <a class="footer-social-link footer-item-trip" href="https://www.tripadvisor.ru/" target="_blank"></a>
+            </li>
+            <li class="footer-item-social">
+              <a class="footer-social-link footer-item-ok" href="http://ok.ru" target="_blank"></a>
+            </li>
+            <li class="footer-item-social">
+              <a class="footer-social-link  footer-item-vk" href="http://vk.com" target="_blank"></a>
+            </li>
           </ul>
         </div>
       </div>
