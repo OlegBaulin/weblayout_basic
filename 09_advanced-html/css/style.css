@@ -672,7 +672,8 @@ body {
   margin-bottom: 15px;
 }
 
-.footer-item-social {
+.footer-social-link {
+  display: block;
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
