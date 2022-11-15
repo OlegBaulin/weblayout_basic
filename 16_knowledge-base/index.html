@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База знаний</title>
+    <link rel="stylesheet" href="./css/libs/choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</head>
+<body>
+
+  <!-- checkbox -->
+  <div class="custom-checkbox">
+    <h2 class="custom-checkbox__title">Категории:</h2>
+    <ul class="custom-checkbox__list">
+      <li class="custom-checkbox__item">
+        <label for="dinosaurs">
+          <input type="checkbox" name="dinosaurs" id="dinosaurs" class="custom-checkbox__input" checked>
+          Динозавры
+          <span></span>
+        </label>
+      </li>
+      <li class="custom-checkbox__item">
+        <label for="bear">
+          <input type="checkbox" name="bear" id="bear" class="custom-checkbox__input">
+          Медведи
+          <span></span>
+        </label>
+      </li>
+      <li class="custom-checkbox__item">
+        <label for="roe">
+          <input type="checkbox" name="roe" id="roe" class="custom-checkbox__input">
+          Косули
+          <span></span>
+        </label>
+      </li>
+      <li class="custom-checkbox__item">
+        <label for="foxes">
+          <input type="checkbox" name="check" id="foxes" class="custom-checkbox__input">
+          Лисы
+          <span></span>
+        </label>
+      </li>
+      <li class="custom-checkbox__item">
+        <label for="wolves">
+          <input type="checkbox" name="wolves" id="wolves" class="custom-checkbox__input">
+          Волки
+          <span></span>
+        </label>
+      </li>
+      <li class="custom-checkbox__item">
+        <label for="deer">
+          <input type="checkbox" name="deer" id="deer" class="custom-checkbox__input">
+          Олени и лоси
+          <span></span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <!-- select -->
+  <select id="select">
+    <option>Материал</option>
+    <option>Древесина</option>
+    <option>Металл</option>
+    <option>Камень</option>
+    <option>Пластик</option>
+    <option>Композитный</option>
+    <option>Гипс</option>
+  </select>
+
+  <!-- карта -->
+  <div id="map" style="width: 600px; height: 400px"></div>
+
+  <!-- scroll -->
+  <div class="scroll" data-simplebar>
+    Сложно сказать, почему многие известные личности представлены в&nbsp;исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а&nbsp;также свежий взгляд на&nbsp;привычные вещи&nbsp;&mdash; безусловно открывает новые горизонты для первоочередных требований.
+  </div>
+
+  <!-- валидация формы -->
+  <form action="" class="form">
+    <label for="name" class="form__label">
+      <input class="form__input" type="text" name="name" id="name" placeholder="Имя*" data-validate-field="name">
+    </label>
+    <label for="tel" class="form__label">
+      <input class="form__input" type="tel" name="tel" id="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
+    </label>
+    <label for="email" class="form__label">
+      <input class="form__input" type="email" name="email" id="email" placeholder="E-mail*" data-validate-field="email">
+    </label>
+    <button class="form__btn" type="submit">Заказать</button>
+  </form>
+
+  <!-- tooltip -->
+  <div class="tooltip">
+    <p>
+      Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+      <span class="info" id="info">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"/>
+        </svg>
+      </span>
+    </p>
+  </div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="./js/libs/choices.min.js"></script>
+  <script src="./js/libs/just-validate.min.js"></script>
+  <script src="./js/libs/inputmask.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script src="./js/scripts.js"></script>
+</body>
+</html>

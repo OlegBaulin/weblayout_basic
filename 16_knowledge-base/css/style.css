@@ -1,0 +1,257 @@
+body {
+  background-color: #424242;
+}
+
+/* checkbox */
+label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  padding: 30px;
+  margin-bottom: 50px;
+  width: 176px;
+  border-radius: 10px;
+  background: #FFFFFF;
+}
+
+.custom-checkbox__title {
+  margin: 0;
+}
+
+.custom-checkbox__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.custom-checkbox__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.custom-checkbox__input {
+  display: none;
+}
+
+.custom-checkbox__input + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.custom-checkbox__input + span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-color:#ccb26e;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-checkbox__input:checked + span {
+  border-color: #ccb26e;
+}
+
+.custom-checkbox__input:checked + span:before {
+  opacity: 1;
+}
+
+/* select */
+.choices__inner {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  padding: 9px 0 11px 15px;
+  min-height: 39px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.choices__list.choices__list--dropdown {
+  margin-top: -10px;
+  width: 180px;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices__placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  opacity: 1;
+}
+
+.choices[data-type*=select-one]::after {
+  left: 170px;
+  margin: 0;
+  width: 16px;
+  height: 8px;
+  right: 15px;
+  border: none;
+  background-image: url(../img/custom-select.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translateY(-50%);
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin: 0;
+  background-image: url(../img/custom-select-open.svg);
+  z-index: 2;
+}
+
+.is-focused.is-open .choices__inner {
+  position: relative;
+  border: 1px solid #CCB26E;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.choices__list.choices__list--dropdown.is-active {
+  border: 1px solid #CCB26E;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+#choices--select-item-choice-5 {
+  display: none;
+}
+
+.choices__list--dropdown {
+  padding: 20px 0 20px 15px;
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding: 0;
+}
+
+.choices__item--choice {
+  width: fit-content;
+}
+
+.choices__item--choice:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* карта */
+#map {
+  margin-bottom: 50px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+/* scroll */
+.scroll {
+  padding: 30px;
+  margin-bottom: 50px;
+  width: 400px;
+  height: 310px;
+  box-sizing: border-box;
+  background-color: #fff;
+  line-height: 170%;
+  color: #333;
+}
+
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #ccb26e;
+}
+
+/* валидация формы */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  max-width: 440px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 38px 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form__input {
+  width: 380px;
+  margin-bottom: 31px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+}
+
+.form__label {
+  padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form__btn {
+  padding: 18px 53px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff5c00;
+  color: #fff;
+}
+
+.js-validate-error-label {
+  padding-left: 20px;
+}
+
+/* tooltip */
+.tooltip {
+  padding: 20px 78px 20px 29px;
+  width: 286px;
+  height: 120px;
+  background-color: #fff;
+}
+
+.tooltip p {
+  margin: 0;
+  line-height: 170%;
+  color: #333;
+}
+
+.info {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.info path{
+  fill: #bcbcbc;
+}
+
+.info:hover path{
+  fill: #ccb26e;
+}
+
+.tippy-box {
+  background-color: rgb(102, 102, 102);
+}
+
+.tippy-arrow {
+  color: rgb(102, 102, 102);
+}
